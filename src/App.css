@@ -1,0 +1,37 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css');
+* {
+  box-sizing: border-box
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 15px;
+}
+
+.header__logo {
+  font-size: 24px;
+  color: #000000;
+}
+
+.main {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__link {
+  padding: 0 15px;
+}
+
+.nav__link.active {
+  color: orange;
+}
+
+.footer {
+  text-align: center;
+}
