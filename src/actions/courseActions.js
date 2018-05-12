@@ -26,3 +26,30 @@ export function loadCourses() {
 export function loadCoursesSuccess(courses) {
   return { type: appConstants.LOAD_COURSES_SUCCESS, courses };
 }
+
+export function saveCourse(course) {
+  return function(dispatch, getState) {
+    return courseApi
+      .saveCourse(course)
+      .then(savedCourse => {
+        course.id
+          ? dispatch(updateCourseSuccess(savedCourse))
+          : dispatch(createCourseSuccess(savedCourse));
+      })
+      .catch(error => {
+        throw error;
+      });
+  };
+  return {
+    type: appConstants.CREATE_COURSE,
+    course
+  };
+}
+
+export function createCourseSuccess(course) {
+  return { type: appConstants.CREATE_COURSE_SUCCESS, course };
+}
+
+export function updateCourseSuccess(course) {
+  return { type: appConstants.UPDATE_COURSE_SUCCESS, course };
+}
