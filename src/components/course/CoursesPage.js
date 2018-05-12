@@ -8,22 +8,20 @@ class CoursesPage extends Component {
   constructor(props, context) {
     super(props, context);
   }
-  // onTitleChange = e => {
-  //   this.setState({
-  //     course: {
-  //       title: e.target.value
-  //     }
-  //   });
-  // };
-  // onClickSave = () => {
-  //   this.props.actions.createCourse(this.state.course);
-  // };
-
+  redirectToAddCoursePage = () => {
+    this.props.history.push('/course');
+  };
   render() {
     return (
       <div>
         <h1>Courses</h1>
         <CourseList courses={this.props.courses} />
+        <button
+          className="btn btn-primary"
+          onClick={this.redirectToAddCoursePage}
+        >
+          Add course
+        </button>
       </div>
     );
   }
