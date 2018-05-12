@@ -6,7 +6,7 @@ import Footer from './components/common/Footer';
 
 import HomePage from './components/home/HomePage';
 import AboutPage from './components/about/AboutPage';
-import CoursePage from './components/course/CoursePage';
+import CoursesPage from './components/course/CoursesPage';
 
 import './App.css';
 
@@ -19,7 +19,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/about" component={AboutPage} />
-            <Route exact path="/courses" component={CoursePage} />
+            <Route exact path="/courses" component={CoursesPage} />
           </Switch>
         </main>
         <Footer />
