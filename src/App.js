@@ -26,7 +26,7 @@ class App extends Component {
               exact
               path="/course/:id"
               component={ManageCoursePage}
-            />course
+            />
           </Switch>
         </main>
         <Footer />
